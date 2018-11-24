@@ -16,7 +16,9 @@ public class Main {
 		new SchrottKollision();
 		new Explosion();
 		new Verloren();
-	
+		new ActionHandler();
+		new Aktualisierung();
+		new Schuss();
 
 	}
 

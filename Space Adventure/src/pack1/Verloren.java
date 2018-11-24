@@ -19,7 +19,25 @@ public class Verloren {
 						temp++;
 					}else if(temp == 56) {
 						
-						System.out.println("Verloren");
+					//Menü
+						Var.imSpiel = false;
+						Var.imMenü = false;
+						Var.imShop = true;
+						Var.imOptionen = false;
+						Var.btnresume.setVisible(true);
+						Var.btnshop.setVisible(false);
+						Var.btnoptionen.setVisible(false);
+						Var.btnexit.setVisible(false);
+						Var.btnupgrade1.setVisible(true);
+						Var.btnupgrade2.setVisible(true);
+						Var.btnupgrade3.setVisible(true);
+						Var.btnleben.setVisible(true);
+						
+						KeyHandler.tempKeyHandler++;
+						Var.btnresume.requestFocus();
+						Var.jf1.requestFocus();
+						
+						
 						// Schrottplatzierung 
 						for (int i = 0; i <= 4; i++) {
 							Var.schrottx1[i] = 20 + temp1;
@@ -49,11 +67,8 @@ public class Verloren {
 						
 						temp=0;
 						
-						if(Var.schrott >= 50) {
-							Var.schrott -= 50;
-						}else {
-							Var.schrott = 0;
-						}
+						Var.schrott = 0;
+						
 						Var.leben = Var.maxleben;
 						Var.verloren = false; 
 					}

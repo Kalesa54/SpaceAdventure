@@ -25,6 +25,15 @@ public class KeyHandler implements KeyListener {
 		Var.moveright = true;
 	}
 	
+	if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+		if(Var.bolschuss == false && Var.ammo >0) {
+			Var.bolschuss = true;
+			Var.schussx = Var.x + 15;
+			Var.schussy = Var.y - 45;
+			Var.ammo--;
+		}
+	}
+	
 	if(tempKeyHandler == 0) {
 		//Menü
 		if(e.getKeyCode() == KeyEvent.VK_ESCAPE) {
@@ -50,7 +59,13 @@ public class KeyHandler implements KeyListener {
 			Var.btnshop.setVisible(false);
 			Var.btnoptionen.setVisible(false);
 			Var.btnexit.setVisible(false);
-			tempKeyHandler++;
+			
+			Var.btnupgrade1.setVisible(false);
+			Var.btnupgrade2.setVisible(false);
+			Var.btnupgrade3.setVisible(false);
+			Var.btnleben.setVisible(false);
+			
+			tempKeyHandler--;
 			Aktualisierung.tempAktualisierung = 0;
 		} 
 	}

@@ -15,11 +15,11 @@ private int temp = 0;
 				if(Var.imSpiel) {
 					
 				if(Var.kollidiert) {
-					if(temp <15) {
-						Var.expanimation = temp;
+					if(temp <23) {
+						
 						temp++;
-					}else if(temp == 15) {
-						Var.expanimation = 15;
+					}else if(temp == 23) {
+						Var.gifexplosion.flush();
 						temp = 0;
 						Var.kollidiert = false; 
 					}
